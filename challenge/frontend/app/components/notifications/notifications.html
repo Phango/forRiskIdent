@@ -1,0 +1,28 @@
+<div class="notifications" ng-controller="notificationsController">
+    <div class="notification master" >
+        <span class="title" ng-click="toggleNotificationDetails()">Notifications:</span>
+        <div class="counts">
+            <div class="count info" ng-click="filterBy('info')">{{infoCount}}</div>
+            <div class="count warning" ng-click="filterBy('warning')">{{warningCount}}</div>
+            <div class="count error" ng-click="filterBy('error')">{{errorCount}}</div>
+        </div>
+    </div>
+
+    <div ng-show="showNotificationDetails" class="notification-detail-wrapper">
+        <div class="notification details" ng-class="notification.type" ng-repeat="notification in notifications | filter:filterType">
+            <span class="header">
+                {{ notification.header }}
+            </span>
+
+            <span class="body">
+                {{ notification.body }}
+            </span>
+
+            <div class="notification-dismiss animated fadeIn" ng-click="dismiss(notification)">x</div>
+
+        </div>
+    </div>
+
+</div>
+
+<link rel="stylesheet" href='/components/notifications/notifications.css'>

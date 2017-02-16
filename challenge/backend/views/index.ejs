@@ -1,0 +1,31 @@
+<html>
+<head>
+    <title>RiskIdent notifications backend</title>
+    <link href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Load angular js -->
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.10/angular.min.js"></script>
+
+    <!-- Load angular ui router -->
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.10/angular-ui-router.js"></script>
+
+    <!-- Load app entry point -->
+    <script src="/javascripts/angularApp.js"></script>
+    <script src="/javascripts/app/config.js"></script>
+
+    <!-- Main component -->
+    <script src="/javascripts/app/component/main/controller.js"></script>
+
+    <!-- Notifications component -->
+    <script src="/javascripts/app/component/notifications/factory.js"></script>
+
+    <style> .glyphicon-thumbs-up { cursor:pointer } </style>
+</head>
+<body ng-app="riskIdentBackend" ng-controller="MainCtrl">
+    <div class="row">
+        <div class="col-md-10 col-md-offset-1">
+            <ui-view></ui-view>
+        </div>
+    </div>
+</body>
+</html>
